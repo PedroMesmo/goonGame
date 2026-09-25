@@ -2,6 +2,7 @@ from gooner import Goon
 
 def criar_personagem():
 
+#Função para permitir somente respostas válidas perante a suprema corte
     def questao(pergunta, opcoes):
         while True:
             resposta = input(pergunta)
@@ -13,11 +14,40 @@ def criar_personagem():
 
     gooner = Goon(0,0,0,0,0,0,0,0,0)
 
-    mulher = questao('Mulher(trans, btw)\n[S]Sim    [N]Não')
+
+#Definindo o gênero.
+    mulher = questao('Mulher(trans, btw)\n[S]Sim    [N]Não', ['s','n'])
+
     if mulher == 's':
         gooner.mulher = True
     else:
         gooner.mulher = False
+
+
+#Definindo a religião
+    religiao = int(input('Religião\n'
+                     '[1]Cristianismo\n'
+                     '[2]Judaísmo\n'
+                     '[3]Islamismo\n'
+                     '[4]Budismo\n'
+                     '[5]Satanismo\n'
+                     '[6]Lei Felca\n'
+                     '[7]Outro'))
+    if religiao == 1:
+        gooner.religiao = 'cristianismo'
+    elif religiao == 2:
+        gooner.religiao = 'judaismo'
+    elif religiao == 3:
+        gooner.religiao = 'islamismo'
+    elif religiao == 4:
+        gooner.religiao = 'budismo'
+    elif religiao == 5:
+        gooner.religiao = 'satanismo'
+    elif religiao == 6:
+        gooner.religiao = 'Lei Felca'
+    else:
+        gooner.religiao = input('Certo diferentão, nos conte qual a sua religião ultra nichada:')
+
 
     femboy = questao('Femboy\n[S]Sim    [N]Não', ['s','n'])
     if femboy == 's':

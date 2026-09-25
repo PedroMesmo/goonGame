@@ -1,6 +1,6 @@
 from gooner import Goon
 
-gonner = Goon(100, 100, 1)
+gonner = Goon(100, 100, 1,0,0,0,0,0,0)
 
 
 while gonner.sanidade != 0 :
